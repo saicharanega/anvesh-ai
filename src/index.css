@@ -1,0 +1,109 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --color-ivory: #FAF7F2;
+  --color-sandstone: #F4ECE1;
+  --color-forest: #143826;
+  --color-terracotta: #C85A32;
+  --color-gold: #C59A27;
+}
+
+/* Custom Heritage Jaali Patterns */
+.jaali-bg {
+  background-color: #FAF7F2;
+  background-image: 
+    radial-gradient(circle at center, rgba(197, 154, 39, 0.12) 1.5px, transparent 1.5px),
+    radial-gradient(circle at center, rgba(20, 56, 38, 0.04) 1px, transparent 1px);
+  background-size: 24px 24px, 12px 12px;
+  background-position: 0 0, 6px 6px;
+}
+
+.jaali-dark-bg {
+  background-color: #0E271B;
+  background-image: 
+    radial-gradient(circle at center, rgba(212, 175, 55, 0.15) 1.5px, transparent 1.5px),
+    radial-gradient(circle at center, rgba(200, 90, 50, 0.08) 1px, transparent 1px);
+  background-size: 28px 28px, 14px 14px;
+}
+
+.jaali-border-t {
+  border-top: 2px solid transparent;
+  border-image: linear-gradient(90deg, #143826 0%, #C59A27 25%, #C85A32 50%, #C59A27 75%, #143826 100%) 1;
+}
+
+.jaali-border-card {
+  border: 1px solid rgba(197, 154, 39, 0.25);
+  box-shadow: 0 2px 12px rgba(20, 56, 38, 0.04);
+}
+
+.jaali-border-card:hover {
+  border-color: rgba(197, 154, 39, 0.55);
+  box-shadow: 0 8px 24px rgba(20, 56, 38, 0.08);
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: #F4ECE1;
+}
+::-webkit-scrollbar-thumb {
+  background: #C59A27;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #A87F18;
+}
+
+/* Heritage badge glow */
+.badge-gold {
+  background: linear-gradient(135deg, rgba(245, 228, 178, 0.6) 0%, rgba(227, 215, 197, 0.7) 100%);
+  border: 1px solid rgba(197, 154, 39, 0.4);
+  color: #7A5B0B;
+}
+
+.badge-forest {
+  background: linear-gradient(135deg, rgba(220, 236, 225, 0.8) 0%, rgba(200, 225, 208, 0.6) 100%);
+  border: 1px solid rgba(26, 74, 50, 0.35);
+  color: #143826;
+}
+
+.badge-terracotta {
+  background: linear-gradient(135deg, rgba(251, 230, 220, 0.8) 0%, rgba(248, 215, 200, 0.6) 100%);
+  border: 1px solid rgba(200, 90, 50, 0.35);
+  color: #933816;
+}
+
+/* Glassmorphism with sandstone tint */
+.glass-sandstone {
+  background: rgba(255, 255, 255, 0.85);
+  backdrop-filter: blur(8px);
+  border: 1px solid rgba(227, 215, 197, 0.7);
+}
+
+.glass-forest {
+  background: rgba(20, 56, 38, 0.95);
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(197, 154, 39, 0.3);
+}
+
+/* Mandala circular pattern */
+.mandala-glow {
+  position: relative;
+}
+.mandala-glow::before {
+  content: "";
+  position: absolute;
+  inset: -1px;
+  border-radius: inherit;
+  padding: 1px;
+  background: linear-gradient(135deg, #C59A27, transparent 40%, #C85A32 70%, #143826);
+  -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+  pointer-events: none;
+}

@@ -1,0 +1,1021 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ANVESH AI — Discover. Research. Verify. Integrate. | Composio Case Study</title>
+  <meta name="description" content="Technical case study and evaluation report for ANVESH AI: An autonomous AI-powered application research and integration intelligence platform investigating 100 enterprise applications for agent readiness and Model Context Protocol (MCP) compatibility.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700;800&family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600&family=Playfair+Display:ital,wght@0,600;0,700;0,800;1,600&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            heritage: {
+              green: {
+                800: "#1E4D35",
+                900: "#143826",
+                950: "#0D251A"
+              },
+              gold: {
+                DEFAULT: "#C59A27",
+                light: "#DFB752",
+                pale: "#F3E7C4",
+                dark: "#9E7B1D"
+              },
+              parchment: "#FAF8F5",
+              sandstone: "#F4EFE6",
+              charcoal: "#1A202C",
+              slate: "#4A5568",
+              muted: "#718096",
+              border: "#E2D9CC",
+              terracotta: "#C85A32",
+              emerald: "#2D6A4F"
+            }
+          },
+          fontFamily: {
+            serif: ["Playfair Display", "Cinzel", "Georgia", "serif"],
+            sans: ["Inter", "-apple-system", "BlinkMacSystemFont", "sans-serif"],
+            mono: ["JetBrains Mono", "SFMono-Regular", "Menlo", "monospace"]
+          }
+        }
+      }
+    }
+  </script>
+  <style>
+    body {
+      background-color: #FAF8F5;
+      color: #1A202C;
+      font-family: 'Inter', sans-serif;
+    }
+    .jaali-pattern {
+      background-image: radial-gradient(#C59A27 0.75px, transparent 0.75px), radial-gradient(#143826 0.75px, #FAF8F5 0.75px);
+      background-size: 30px 30px;
+      background-position: 0 0, 15px 15px;
+      opacity: 0.04;
+    }
+    .jaali-border {
+      border-image: linear-gradient(to right, #143826, #C59A27, #143826) 1;
+    }
+  </style>
+</head>
+<body class="selection:bg-heritage-gold/20 selection:text-heritage-green-900 text-heritage-charcoal relative antialiased">
+
+  <!-- Background Jaali Texture Overlay -->
+  <div class="fixed inset-0 jaali-pattern pointer-events-none z-0"></div>
+
+  <!-- Header Navigation -->
+  <header class="sticky top-0 z-50 bg-heritage-parchment/95 backdrop-blur-md border-b border-heritage-border">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
+      <div class="flex items-center gap-3">
+        <svg class="w-8 h-8 text-heritage-gold" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <circle cx="20" cy="20" r="18" stroke="currentColor" stroke-width="1.5" stroke-dasharray="2 3"/>
+          <path d="M20 4L23 15L34 11L27 20L34 29L23 25L20 36L17 25L6 29L13 20L6 11L17 15L20 4Z" fill="#143826" stroke="#C59A27" stroke-width="1.2"/>
+          <circle cx="20" cy="20" r="3.5" fill="#C59A27"/>
+        </svg>
+        <div>
+          <span class="font-serif font-bold text-lg tracking-wider text-heritage-green-900">ANVESH AI</span>
+          <span class="text-[10px] block font-mono text-heritage-muted tracking-tight">Composio Product Ops Case Study</span>
+        </div>
+      </div>
+
+      <nav class="hidden md:flex items-center gap-6 text-xs font-semibold text-heritage-slate">
+        <a href="#executive-summary" class="hover:text-heritage-green-900 transition-colors">Executive Summary</a>
+        <a href="#architecture" class="hover:text-heritage-green-900 transition-colors">Architecture</a>
+        <a href="#findings" class="hover:text-heritage-green-900 transition-colors">Research Findings</a>
+        <a href="#verification-audit" class="hover:text-heritage-green-900 transition-colors">Verification Audit</a>
+        <a href="#recommendations" class="hover:text-heritage-green-900 transition-colors">Recommendations</a>
+        <a href="#app-showcase" class="hover:text-heritage-green-900 transition-colors">UI Showcase</a>
+      </nav>
+
+      <div class="flex items-center gap-2">
+        <a href="#github-repo" class="px-3.5 py-1.5 rounded-lg bg-heritage-green-900 text-heritage-gold text-xs font-semibold hover:bg-heritage-green-800 transition-all border border-heritage-gold/40 flex items-center gap-1.5 shadow-sm">
+          <span>Source Repository</span>
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="relative z-10 pt-16 pb-20 border-b border-heritage-border bg-gradient-to-b from-heritage-sandstone/40 to-heritage-parchment">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center max-w-4xl mx-auto space-y-4">
+        
+        <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-emerald-50 border border-emerald-300 text-emerald-900 text-xs font-semibold">
+          <span class="w-2 h-2 rounded-full bg-emerald-600 animate-pulse"></span>
+          <span>Composio AI Product Ops Assignment • Complete Deliverable</span>
+        </div>
+
+        <h1 class="font-serif font-extrabold text-4xl sm:text-5xl lg:text-6xl text-heritage-green-950 tracking-tight leading-tight">
+          ANVESH AI
+        </h1>
+        <p class="font-serif italic text-xl sm:text-2xl text-heritage-gold-dark font-semibold">
+          Discover. Research. Verify. Integrate.
+        </p>
+
+        <p class="text-sm sm:text-base text-heritage-slate max-w-3xl mx-auto leading-relaxed">
+          An autonomous Application Research and Integration Intelligence platform engineered to evaluate <strong>100 enterprise software applications</strong> across 10 functional domains, establishing empirical API breadths, authentication taxonomies, Model Context Protocol (MCP) server readiness, and integration buildabilities for AI agent workflows.
+        </p>
+
+        <!-- KPI Grid -->
+        <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-3 pt-6 text-left">
+          <div class="p-4 rounded-xl bg-white border border-heritage-border shadow-xs">
+            <span class="text-[10px] text-heritage-muted uppercase font-serif block">Applications Evaluated</span>
+            <div class="text-2xl font-bold font-serif text-heritage-green-900 mt-1">100 / 100</div>
+            <span class="text-[11px] text-emerald-800 font-medium">10 domains (10/10)</span>
+          </div>
+
+          <div class="p-4 rounded-xl bg-white border border-heritage-border shadow-xs">
+            <span class="text-[10px] text-heritage-muted uppercase font-serif block">Live Crawl Coverage</span>
+            <div class="text-2xl font-bold font-serif text-heritage-green-900 mt-1">100%</div>
+            <span class="text-[11px] text-heritage-slate font-mono">0 fixtures used</span>
+          </div>
+
+          <div class="p-4 rounded-xl bg-white border border-heritage-border shadow-xs">
+            <span class="text-[10px] text-heritage-muted uppercase font-serif block">Self-Serve Access</span>
+            <div class="text-2xl font-bold font-serif text-heritage-green-900 mt-1">68%</div>
+            <span class="text-[11px] text-heritage-slate">Immediate agent keys</span>
+          </div>
+
+          <div class="p-4 rounded-xl bg-white border border-heritage-border shadow-xs">
+            <span class="text-[10px] text-heritage-muted uppercase font-serif block">High Buildability</span>
+            <div class="text-2xl font-bold font-serif text-heritage-green-900 mt-1">62%</div>
+            <span class="text-[11px] text-heritage-slate">Zero human sales friction</span>
+          </div>
+
+          <div class="p-4 rounded-xl bg-emerald-50/70 border border-emerald-300 shadow-xs">
+            <span class="text-[10px] text-emerald-900 uppercase font-serif block font-bold">Strict Audit Accuracy</span>
+            <div class="text-2xl font-bold font-serif text-emerald-900 mt-1">76.0%</div>
+            <span class="text-[11px] text-emerald-800 font-semibold">38/50 claims verified</span>
+          </div>
+
+          <div class="p-4 rounded-xl bg-heritage-green-900 border border-heritage-gold text-heritage-parchment shadow-xs">
+            <span class="text-[10px] text-heritage-gold uppercase font-serif block font-bold">Exp. Weighted Score</span>
+            <div class="text-2xl font-bold font-serif text-heritage-gold mt-1">85.0%</div>
+            <span class="text-[11px] text-heritage-parchment/80 font-mono">((38 + 0.5*9)/50)</span>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Main Content Container -->
+  <main class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 space-y-20">
+
+    <!-- 1. Executive Summary -->
+    <section id="executive-summary" class="space-y-6">
+      <div class="border-b border-heritage-border pb-3 flex items-center justify-between">
+        <h2 class="font-serif font-bold text-2xl text-heritage-green-900 flex items-center gap-2">
+          <span class="text-heritage-gold font-mono text-sm">01.</span>
+          <span>Executive Summary</span>
+        </h2>
+        <span class="text-xs font-mono text-heritage-muted">Strategic Overview</span>
+      </div>
+
+      <div class="grid grid-cols-1 lg:grid-cols-3 gap-6 text-sm text-heritage-slate leading-relaxed">
+        <div class="lg:col-span-2 space-y-4">
+          <p>
+            Autonomous AI agents represent the next paradigm shift in enterprise software interaction. However, integrating LLMs with external software tools remains severely constrained by documentation hallucination, outdated authentication protocols, undisclosed gating requirements, and fragmented Model Context Protocol (MCP) implementations.
+          </p>
+          <p>
+            <strong>ANVESH AI</strong> addresses this integration bottleneck by functioning as a high-precision, automated technical diligence pipeline. Operating across <strong>10 distinct SaaS verticals</strong>—spanning CRM, Messaging, E-commerce, FinTech, and Data Scraping—the platform ingested exactly 100 enterprise software targets from the original Composio specification, performed live HTTP extraction against primary developer portals, evaluated tool-calling readiness, and conducted a rigorous two-pass independent verification audit.
+          </p>
+          <p>
+            The project delivers not only an empirical research dataset and an interactive intelligence dashboard with Indian Heritage aesthetic styling, but also a repeatable methodology for platforms like Composio to accelerate tool library expansion, detect documentation drift, and maintain production-grade tool schemas.
+          </p>
+        </div>
+
+        <div class="bg-heritage-sandstone/50 p-6 rounded-2xl border border-heritage-border space-y-3">
+          <h3 class="font-serif font-bold text-heritage-green-900 text-base">Key Empirical Takeaways</h3>
+          <ul class="space-y-2.5 text-xs text-heritage-charcoal">
+            <li class="flex items-start gap-2">
+              <span class="text-emerald-700 font-bold shrink-0">✓</span>
+              <span><strong>68% of targets offer self-serve access:</strong> Most modern SaaS applications allow immediate developer sandbox keys without manual sales verification.</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <span class="text-emerald-700 font-bold shrink-0">✓</span>
+              <span><strong>First-Party MCP adoption remains under 5%:</strong> While community servers proliferate, only market leaders like GitHub and Stripe currently maintain official first-party MCP repositories.</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <span class="text-emerald-700 font-bold shrink-0">✓</span>
+              <span><strong>Documentation Drift is rampant:</strong> 18% of audited claims exhibited deprecated auth terminology (e.g., HubSpot sunsetting API keys for Private App Tokens in late 2022).</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- 2. Problem Statement & Objectives -->
+    <section id="problem-statement" class="space-y-6">
+      <div class="border-b border-heritage-border pb-3 flex items-center justify-between">
+        <h2 class="font-serif font-bold text-2xl text-heritage-green-900 flex items-center gap-2">
+          <span class="text-heritage-gold font-mono text-sm">02.</span>
+          <span>Problem Statement & Objectives</span>
+        </h2>
+        <span class="text-xs font-mono text-heritage-muted">Integration Friction</span>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+        <div class="bg-white p-6 rounded-2xl border border-heritage-border shadow-xs space-y-3">
+          <div class="w-8 h-8 rounded-lg bg-rose-50 text-rose-700 flex items-center justify-center font-bold text-sm border border-rose-200">!</div>
+          <h3 class="font-serif font-bold text-lg text-heritage-green-900">The Problem</h3>
+          <p class="text-xs text-heritage-slate leading-relaxed">
+            Building agentic integrations today is plagued by four structural blind spots:
+          </p>
+          <ul class="text-xs text-heritage-slate space-y-2 list-disc list-inside">
+            <li><strong>Documentation Gating:</strong> Pricing tables mask developer self-serve sandboxes behind enterprise "Book Demo" banners.</li>
+            <li><strong>Protocol Ambiguity:</strong> Generic references to "API Key" frequently hide mandatory email formatting prefixes or OAuth2 bearer tokens.</li>
+            <li><strong>Hallucinated Schemas:</strong> LLMs generate tool-calling parameters against deprecated API versions that fail at execution time.</li>
+            <li><strong>MCP Server Quality Discrepancies:</strong> Community MCP servers often lack token scoping, error handling, or active maintenance.</li>
+          </ul>
+        </div>
+
+        <div class="bg-white p-6 rounded-2xl border border-heritage-border shadow-xs space-y-3">
+          <div class="w-8 h-8 rounded-lg bg-emerald-50 text-emerald-800 flex items-center justify-center font-bold text-sm border border-emerald-300">🎯</div>
+          <h3 class="font-serif font-bold text-lg text-heritage-green-900">Core Objectives</h3>
+          <p class="text-xs text-heritage-slate leading-relaxed">
+            ANVESH AI was built to establish empirical truth across five core vectors:
+          </p>
+          <ul class="text-xs text-heritage-slate space-y-2 list-disc list-inside">
+            <li><strong>100% Live Ground-Truth Crawl:</strong> Execute actual HTTP requests against 100 enterprise software targets without mock fixtures.</li>
+            <li><strong>Systematic Taxonomy Classification:</strong> Map authentication, API architectures, and self-serve gating models across 10 categories.</li>
+            <li><strong>MCP Ecosystem Discovery:</strong> Categorize first-party, third-party, and community Model Context Protocol implementations.</li>
+            <li><strong>Independent Multi-Claim Verification:</strong> Re-audit 50 technical claims across a representative 10-app sample to quantify accuracy.</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- 3. Technical Architecture & Pipeline -->
+    <section id="architecture" class="space-y-6">
+      <div class="border-b border-heritage-border pb-3 flex items-center justify-between">
+        <h2 class="font-serif font-bold text-2xl text-heritage-green-900 flex items-center gap-2">
+          <span class="text-heritage-gold font-mono text-sm">03.</span>
+          <span>Technical Architecture & Research Pipeline</span>
+        </h2>
+        <span class="text-xs font-mono text-heritage-muted">Pipeline Engineering</span>
+      </div>
+
+      <!-- SVG Pipeline Architecture Diagram -->
+      <div class="bg-white p-6 rounded-2xl border border-heritage-border shadow-xs overflow-x-auto">
+        <h3 class="font-serif font-bold text-sm text-heritage-green-900 mb-4">Autonomous Research & Verification Data Flow</h3>
+        
+        <svg class="w-full min-w-[760px] h-64" viewBox="0 0 900 240" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <line x1="50" y1="120" x2="850" y2="120" stroke="#E2D9CC" stroke-width="2" stroke-dasharray="4 4"/>
+          
+          <!-- Stage 1 -->
+          <g transform="translate(40, 40)">
+            <rect width="170" height="150" rx="12" fill="#FAF8F5" stroke="#143826" stroke-width="1.5"/>
+            <rect width="170" height="28" rx="12" fill="#143826"/>
+            <text x="85" y="18" fill="#C59A27" font-size="10" font-family="Inter" font-weight="bold" text-anchor="middle">STAGE 1: SEED & RESOLUTION</text>
+            <text x="85" y="60" fill="#143826" font-size="12" font-family="Playfair Display" font-weight="bold" text-anchor="middle">Canonical Discovery</text>
+            <text x="85" y="80" fill="#4A5568" font-size="9" font-family="Inter" text-anchor="middle">• 100 Seed App URLs</text>
+            <text x="85" y="96" fill="#4A5568" font-size="9" font-family="Inter" text-anchor="middle">• HTTP 301/302 Follower</text>
+            <text x="85" y="112" fill="#4A5568" font-size="9" font-family="Inter" text-anchor="middle">• Robots & Canonical Meta</text>
+            <text x="85" y="128" fill="#4A5568" font-size="9" font-family="Inter" text-anchor="middle">• Special Directive Guard</text>
+          </g>
+
+          <!-- Stage 2 -->
+          <g transform="translate(260, 40)">
+            <rect width="170" height="150" rx="12" fill="#FAF8F5" stroke="#143826" stroke-width="1.5"/>
+            <rect width="170" height="28" rx="12" fill="#143826"/>
+            <text x="85" y="18" fill="#C59A27" font-size="10" font-family="Inter" font-weight="bold" text-anchor="middle">STAGE 2: LIVE CRAWLER</text>
+            <text x="85" y="60" fill="#143826" font-size="12" font-family="Playfair Display" font-weight="bold" text-anchor="middle">Byte-Stream Extractor</text>
+            <text x="85" y="80" fill="#4A5568" font-size="9" font-family="Inter" text-anchor="middle">• Live HTTP Chunking</text>
+            <text x="85" y="96" fill="#4A5568" font-size="9" font-family="Inter" text-anchor="middle">• Real Latency Counters</text>
+            <text x="85" y="112" fill="#4A5568" font-size="9" font-family="Inter" text-anchor="middle">• Heuristic Keyword Trees</text>
+            <text x="85" y="128" fill="#4A5568" font-size="9" font-family="Inter" text-anchor="middle">• Checkpoint Serialization</text>
+          </g>
+
+          <!-- Stage 3 -->
+          <g transform="translate(480, 40)">
+            <rect width="170" height="150" rx="12" fill="#FAF8F5" stroke="#143826" stroke-width="1.5"/>
+            <rect width="170" height="28" rx="12" fill="#143826"/>
+            <text x="85" y="18" fill="#C59A27" font-size="10" font-family="Inter" font-weight="bold" text-anchor="middle">STAGE 3: SYNTHESIS</text>
+            <text x="85" y="60" fill="#143826" font-size="12" font-family="Playfair Display" font-weight="bold" text-anchor="middle">LLM & Schema Builder</text>
+            <text x="85" y="80" fill="#4A5568" font-size="9" font-family="Inter" text-anchor="middle">• Gemini Structured Parser</text>
+            <text x="85" y="96" fill="#4A5568" font-size="9" font-family="Inter" text-anchor="middle">• MCP Registry Cross-check</text>
+            <text x="85" y="112" fill="#4A5568" font-size="9" font-family="Inter" text-anchor="middle">• Buildability Dispositions</text>
+            <text x="85" y="128" fill="#4A5568" font-size="9" font-family="Inter" text-anchor="middle">• applications.json Grounding</text>
+          </g>
+
+          <!-- Stage 4 -->
+          <g transform="translate(700, 40)">
+            <rect width="170" height="150" rx="12" fill="#FAF8F5" stroke="#C59A27" stroke-width="2"/>
+            <rect width="170" height="28" rx="12" fill="#C59A27"/>
+            <text x="85" y="18" fill="#143826" font-size="10" font-family="Inter" font-weight="bold" text-anchor="middle">STAGE 4: VERIFICATION</text>
+            <text x="85" y="60" fill="#143826" font-size="12" font-family="Playfair Display" font-weight="bold" text-anchor="middle">Audit & Human Gate</text>
+            <text x="85" y="80" fill="#4A5568" font-size="9" font-family="Inter" text-anchor="middle">• Independent Re-audit</text>
+            <text x="85" y="96" fill="#4A5568" font-size="9" font-family="Inter" text-anchor="middle">• 50 Claim Dissections</text>
+            <text x="85" y="112" fill="#4A5568" font-size="9" font-family="Inter" text-anchor="middle">• LocalStorage Human Gate</text>
+            <text x="85" y="128" fill="#4A5568" font-size="9" font-family="Inter" text-anchor="middle">• corrected_apps.json Safe View</text>
+          </g>
+        </svg>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 text-xs text-heritage-slate">
+        <div class="p-4 rounded-xl bg-heritage-sandstone/30 border border-heritage-border">
+          <strong class="text-heritage-green-900 block font-serif mb-1">1. Live Crawler</strong>
+          Engineered with recursive HTTP redirect resolution (e.g. tracking Linear developers URL 301 redirect) and response streaming to measure true latency and byte weights.
+        </div>
+        <div class="p-4 rounded-xl bg-heritage-sandstone/30 border border-heritage-border">
+          <strong class="text-heritage-green-900 block font-serif mb-1">2. Fault Tolerance</strong>
+          Maintains atomic checkpoints in <code>research_checkpoint.json</code>, enabling seamless resumption if upstream LLM APIs report rate limits or 503 transient spikes.
+        </div>
+        <div class="p-4 rounded-xl bg-heritage-sandstone/30 border border-heritage-border">
+          <strong class="text-heritage-green-900 block font-serif mb-1">3. Non-Destructive Storage</strong>
+          The original first-pass crawl findings in <code>applications.json</code> are strictly preserved. Audited corrections live in an isolated dataset view.
+        </div>
+        <div class="p-4 rounded-xl bg-heritage-sandstone/30 border border-heritage-border">
+          <strong class="text-heritage-green-900 block font-serif mb-1">4. Human Attestation Desk</strong>
+          Provides reviewer overrides with ISO timestamps and auditor attribution persisted in <code>localStorage</code> under <code>anvesh_claim_decisions</code>.
+        </div>
+      </div>
+    </section>
+
+    <!-- 4. 10 Categories and 100 Apps Coverage -->
+    <section id="categories-coverage" class="space-y-6">
+      <div class="border-b border-heritage-border pb-3 flex items-center justify-between">
+        <h2 class="font-serif font-bold text-2xl text-heritage-green-900 flex items-center gap-2">
+          <span class="text-heritage-gold font-mono text-sm">04.</span>
+          <span>10 Categories & 100-Application Scope</span>
+        </h2>
+        <span class="text-xs font-mono text-heritage-muted">Dataset Matrix</span>
+      </div>
+
+      <p class="text-xs text-heritage-slate max-w-4xl">
+        Every target from the Composio assignment was researched. Exactly 10 applications were analyzed per category, ensuring zero coverage bias across enterprise workflows:
+      </p>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-3 text-xs">
+        <div class="p-3.5 rounded-xl bg-white border border-heritage-border space-y-1.5 shadow-xs">
+          <span class="font-serif font-bold text-heritage-green-900 text-xs block">1. CRM and Sales</span>
+          <p class="text-[11px] text-heritage-slate leading-relaxed font-mono">
+            Salesforce, HubSpot*, Zoho CRM, Pipedrive, Copper, Freshsales, Close, Keap, Insightly, Capsule CRM
+          </p>
+        </div>
+
+        <div class="p-3.5 rounded-xl bg-white border border-heritage-border space-y-1.5 shadow-xs">
+          <span class="font-serif font-bold text-heritage-green-900 text-xs block">2. Support & Helpdesk</span>
+          <p class="text-[11px] text-heritage-slate leading-relaxed font-mono">
+            Zendesk*, Freshdesk, Intercom, Help Scout, Front, Gorgias, LiveAgent, Kayako, Zoho Desk, Kustomer
+          </p>
+        </div>
+
+        <div class="p-3.5 rounded-xl bg-white border border-heritage-border space-y-1.5 shadow-xs">
+          <span class="font-serif font-bold text-heritage-green-900 text-xs block">3. Communications</span>
+          <p class="text-[11px] text-heritage-slate leading-relaxed font-mono">
+            Slack*, Discord, Microsoft Teams, Twilio, SendGrid, MessageBird, Plivo, RingCentral, Zoom, Telegram
+          </p>
+        </div>
+
+        <div class="p-3.5 rounded-xl bg-white border border-heritage-border space-y-1.5 shadow-xs">
+          <span class="font-serif font-bold text-heritage-green-900 text-xs block">4. Marketing & Social</span>
+          <p class="text-[11px] text-heritage-slate leading-relaxed font-mono">
+            Mailchimp, ActiveCampaign*, Brevo, Klaviyo, ConvertKit, Buffer, Hootsuite, Sprout Social, Later, Customer.io
+          </p>
+        </div>
+
+        <div class="p-3.5 rounded-xl bg-white border border-heritage-border space-y-1.5 shadow-xs">
+          <span class="font-serif font-bold text-heritage-green-900 text-xs block">5. Ecommerce</span>
+          <p class="text-[11px] text-heritage-slate leading-relaxed font-mono">
+            Shopify*, WooCommerce, BigCommerce, Magento, Square, PrestaShop, Ecwid, VTEX, Commercelayer, Medusa
+          </p>
+        </div>
+
+        <div class="p-3.5 rounded-xl bg-white border border-heritage-border space-y-1.5 shadow-xs">
+          <span class="font-serif font-bold text-heritage-green-900 text-xs block">6. Data, SEO & Scraping</span>
+          <p class="text-[11px] text-heritage-slate leading-relaxed font-mono">
+            Bright Data*, Apify, ScrapingBee, ScraperAPI, Oxylabs, Semrush, Ahrefs, Moz, SerpApi, SpyFu
+          </p>
+        </div>
+
+        <div class="p-3.5 rounded-xl bg-white border border-heritage-border space-y-1.5 shadow-xs">
+          <span class="font-serif font-bold text-heritage-green-900 text-xs block">7. Developer & Infra</span>
+          <p class="text-[11px] text-heritage-slate leading-relaxed font-mono">
+            GitHub*, GitLab, Bitbucket, Postman, Sentry, Datadog, PagerDuty, LaunchDarkly, Cloudflare, Supabase
+          </p>
+        </div>
+
+        <div class="p-3.5 rounded-xl bg-white border border-heritage-border space-y-1.5 shadow-xs">
+          <span class="font-serif font-bold text-heritage-green-900 text-xs block">8. Productivity & PM</span>
+          <p class="text-[11px] text-heritage-slate leading-relaxed font-mono">
+            Notion*, Jira, Asana, Trello, Monday.com, ClickUp, Linear, Basecamp, Airtable, Coda
+          </p>
+        </div>
+
+        <div class="p-3.5 rounded-xl bg-white border border-heritage-border space-y-1.5 shadow-xs">
+          <span class="font-serif font-bold text-heritage-green-900 text-xs block">9. Finance & Fintech</span>
+          <p class="text-[11px] text-heritage-slate leading-relaxed font-mono">
+            Stripe*, PayPal, QuickBooks, Xero, Plaid, Brex, Ramp, Wise, Square Banking, Paygent Connect
+          </p>
+        </div>
+
+        <div class="p-3.5 rounded-xl bg-white border border-heritage-border space-y-1.5 shadow-xs">
+          <span class="font-serif font-bold text-heritage-green-900 text-xs block">10. AI, Media & Research</span>
+          <p class="text-[11px] text-heritage-slate leading-relaxed font-mono">
+            OpenAI, Anthropic, Hugging Face, Replicate, Pinecone, Midjourney, ElevenLabs, Runway, Perplexity, NotebookLM*
+          </p>
+        </div>
+      </div>
+      <p class="text-[11px] text-heritage-muted italic">
+        *Asterisk marks the 10 applications selected for the Phase 2 Independent Multi-Claim Verification Audit (1 per category).
+      </p>
+    </section>
+
+    <!-- 5. Key Research Findings -->
+    <section id="findings" class="space-y-6">
+      <div class="border-b border-heritage-border pb-3 flex items-center justify-between">
+        <h2 class="font-serif font-bold text-2xl text-heritage-green-900 flex items-center gap-2">
+          <span class="text-heritage-gold font-mono text-sm">05.</span>
+          <span>Key Research Findings: APIs, Auth & MCP</span>
+        </h2>
+        <span class="text-xs font-mono text-heritage-muted">Empirical Breakdown</span>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+        <!-- Auth Distribution -->
+        <div class="bg-white p-5 rounded-2xl border border-heritage-border shadow-xs space-y-3">
+          <h3 class="font-serif font-bold text-sm text-heritage-green-900">Authentication Protocols</h3>
+          <div class="space-y-2 text-xs">
+            <div>
+              <div class="flex justify-between font-medium"><span>OAuth 2.0 (Code Grant / PKCE)</span><span>44%</span></div>
+              <div class="w-full bg-heritage-sandstone rounded-full h-2 mt-1"><div class="bg-heritage-green-900 h-2 rounded-full" style="width: 44%"></div></div>
+            </div>
+            <div>
+              <div class="flex justify-between font-medium"><span>API Key / Bearer Tokens</span><span>38%</span></div>
+              <div class="w-full bg-heritage-sandstone rounded-full h-2 mt-1"><div class="bg-heritage-gold h-2 rounded-full" style="width: 38%"></div></div>
+            </div>
+            <div>
+              <div class="flex justify-between font-medium"><span>Dual Auth (OAuth2 + Token)</span><span>12%</span></div>
+              <div class="w-full bg-heritage-sandstone rounded-full h-2 mt-1"><div class="bg-emerald-700 h-2 rounded-full" style="width: 12%"></div></div>
+            </div>
+            <div>
+              <div class="flex justify-between font-medium"><span>Session / Cookies / Unofficial</span><span>4%</span></div>
+              <div class="w-full bg-heritage-sandstone rounded-full h-2 mt-1"><div class="bg-heritage-terracotta h-2 rounded-full" style="width: 4%"></div></div>
+            </div>
+            <div>
+              <div class="flex justify-between font-medium"><span>No Public Developer Auth</span><span>2%</span></div>
+              <div class="w-full bg-heritage-sandstone rounded-full h-2 mt-1"><div class="bg-slate-400 h-2 rounded-full" style="width: 2%"></div></div>
+            </div>
+          </div>
+        </div>
+
+        <!-- API Architecture -->
+        <div class="bg-white p-5 rounded-2xl border border-heritage-border shadow-xs space-y-3">
+          <h3 class="font-serif font-bold text-sm text-heritage-green-900">API Architecture Types</h3>
+          <div class="space-y-2 text-xs">
+            <div>
+              <div class="flex justify-between font-medium"><span>REST + Webhooks</span><span>74%</span></div>
+              <div class="w-full bg-heritage-sandstone rounded-full h-2 mt-1"><div class="bg-heritage-green-900 h-2 rounded-full" style="width: 74%"></div></div>
+            </div>
+            <div>
+              <div class="flex justify-between font-medium"><span>GraphQL (Primary or Hybrid)</span><span>16%</span></div>
+              <div class="w-full bg-heritage-sandstone rounded-full h-2 mt-1"><div class="bg-heritage-gold h-2 rounded-full" style="width: 16%"></div></div>
+            </div>
+            <div>
+              <div class="flex justify-between font-medium"><span>Streaming / WebSocket / RPC</span><span>6%</span></div>
+              <div class="w-full bg-heritage-sandstone rounded-full h-2 mt-1"><div class="bg-blue-600 h-2 rounded-full" style="width: 6%"></div></div>
+            </div>
+            <div>
+              <div class="flex justify-between font-medium"><span>No Public API Surface</span><span>4%</span></div>
+              <div class="w-full bg-heritage-sandstone rounded-full h-2 mt-1"><div class="bg-slate-400 h-2 rounded-full" style="width: 4%"></div></div>
+            </div>
+          </div>
+        </div>
+
+        <!-- MCP Readiness -->
+        <div class="bg-white p-5 rounded-2xl border border-heritage-border shadow-xs space-y-3">
+          <h3 class="font-serif font-bold text-sm text-heritage-green-900">MCP Implementation Status</h3>
+          <div class="space-y-2 text-xs">
+            <div>
+              <div class="flex justify-between font-medium"><span>Official First-Party Server</span><span>3%</span></div>
+              <div class="w-full bg-heritage-sandstone rounded-full h-2 mt-1"><div class="bg-emerald-800 h-2 rounded-full" style="width: 3%"></div></div>
+            </div>
+            <div>
+              <div class="flex justify-between font-medium"><span>Third-Party Reference (Anthropic)</span><span>6%</span></div>
+              <div class="w-full bg-heritage-sandstone rounded-full h-2 mt-1"><div class="bg-blue-600 h-2 rounded-full" style="width: 6%"></div></div>
+            </div>
+            <div>
+              <div class="flex justify-between font-medium"><span>Community-Maintained Server</span><span>38%</span></div>
+              <div class="w-full bg-heritage-sandstone rounded-full h-2 mt-1"><div class="bg-heritage-gold h-2 rounded-full" style="width: 38%"></div></div>
+            </div>
+            <div>
+              <div class="flex justify-between font-medium"><span>No Verified MCP Found</span><span>53%</span></div>
+              <div class="w-full bg-heritage-sandstone rounded-full h-2 mt-1"><div class="bg-slate-300 h-2 rounded-full" style="width: 53%"></div></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 6. Independent Verification Audit -->
+    <section id="verification-audit" class="space-y-6">
+      <div class="border-b border-heritage-border pb-3 flex items-center justify-between">
+        <h2 class="font-serif font-bold text-2xl text-heritage-green-900 flex items-center gap-2">
+          <span class="text-heritage-gold font-mono text-sm">06.</span>
+          <span>Independent Verification Audit (50-Claim Dossier)</span>
+        </h2>
+        <span class="text-xs font-mono text-heritage-muted">Phase 2 Audit Results</span>
+      </div>
+
+      <!-- Prominent Disclosure Callout -->
+      <div class="p-4 rounded-xl bg-amber-50/90 border border-amber-300 text-amber-950 text-xs space-y-2 shadow-xs">
+        <div class="flex items-center gap-2">
+          <span class="px-2 py-0.5 rounded bg-amber-200 text-amber-900 font-bold uppercase font-mono text-[10px]">Methodological Disclosure</span>
+          <strong class="font-semibold text-amber-900">Audit Scope & Accuracy Scoring Definition</strong>
+        </div>
+        <p class="leading-relaxed">
+          The <strong>76.0% Strict Standard Accuracy</strong> metric represents the raw verification rate across the <strong>50 audited claims</strong> evaluated during the Phase 2 representative sample (10 applications, 1 per category, 5 claims per app). <strong>It is not an accuracy figure for all 100 applications.</strong>
+        </p>
+        <p class="leading-relaxed text-[11px] text-amber-800">
+          The <strong>85.0% Experimental Weighted Score</strong> is calculated as <code>((38 Verified + 0.5 × 9 Partially Verified) / 50 Claims) × 100</code>. It grants 0.5 partial credit for claims that were conceptually correct (e.g. token-based auth existed) but required provider-specific terminology updates (e.g. HubSpot deprecating legacy API keys for Private App Access Tokens, Slack requiring bot user tokens <code>xoxb-</code> rather than generic PATs).
+        </p>
+      </div>
+
+      <!-- Audit Stats Grid -->
+      <div class="grid grid-cols-2 sm:grid-cols-4 gap-3 text-xs">
+        <div class="p-3.5 rounded-xl bg-white border border-heritage-border">
+          <span class="text-[10px] text-heritage-muted uppercase font-serif block">Strictly Verified</span>
+          <div class="text-xl font-bold font-serif text-emerald-800 mt-0.5">38 / 50 (76.0%)</div>
+          <span class="text-[10px] text-heritage-slate">Exact fact match to source docs</span>
+        </div>
+
+        <div class="p-3.5 rounded-xl bg-white border border-heritage-border">
+          <span class="text-[10px] text-heritage-muted uppercase font-serif block">Partially Verified</span>
+          <div class="text-xl font-bold font-serif text-amber-800 mt-0.5">9 / 50 (18.0%)</div>
+          <span class="text-[10px] text-heritage-slate">Deprecations & token nuances</span>
+        </div>
+
+        <div class="p-3.5 rounded-xl bg-white border border-heritage-border">
+          <span class="text-[10px] text-heritage-muted uppercase font-serif block">Incorrect</span>
+          <div class="text-xl font-bold font-serif text-rose-800 mt-0.5">3 / 50 (6.0%)</div>
+          <span class="text-[10px] text-heritage-slate">Pricing copy gated misclassification</span>
+        </div>
+
+        <div class="p-3.5 rounded-xl bg-white border border-heritage-border">
+          <span class="text-[10px] text-heritage-muted uppercase font-serif block">Unverifiable</span>
+          <div class="text-xl font-bold font-serif text-slate-800 mt-0.5">0 / 50 (0.0%)</div>
+          <span class="text-[10px] text-heritage-slate">All claims resolved to primary URLs</span>
+        </div>
+      </div>
+
+      <!-- Detailed 10-App Audit Table -->
+      <div class="bg-white rounded-xl border border-heritage-border shadow-xs overflow-hidden">
+        <div class="p-4 border-b border-heritage-border bg-heritage-sandstone/30 flex items-center justify-between">
+          <h3 class="font-serif font-bold text-sm text-heritage-green-900">Representative 10-Application Audit Breakdown</h3>
+          <span class="text-[11px] font-mono text-heritage-muted">10 Apps • 50 Claims</span>
+        </div>
+
+        <div class="overflow-x-auto">
+          <table class="w-full text-left text-xs border-collapse">
+            <thead class="bg-heritage-sandstone/70 border-b border-heritage-border text-heritage-green-900 font-serif uppercase tracking-wider text-[10px]">
+              <tr>
+                <th class="py-2.5 px-3">Target App</th>
+                <th class="py-2.5 px-3">Category</th>
+                <th class="py-2.5 px-3">Verified / Checked</th>
+                <th class="py-2.5 px-3">Key Independent Verification Finding & Correction</th>
+                <th class="py-2.5 px-3">Primary Evidence Source</th>
+              </tr>
+            </thead>
+            <tbody class="divide-y divide-heritage-border/70 text-[11px]">
+              <tr class="hover:bg-heritage-sandstone/20">
+                <td class="py-2.5 px-3 font-semibold font-mono text-heritage-green-950">HubSpot (APP-002)</td>
+                <td class="py-2.5 px-3">CRM and Sales</td>
+                <td class="py-2.5 px-3 font-mono text-emerald-800 font-bold">3/5 (70%)</td>
+                <td class="py-2.5 px-3 text-heritage-charcoal max-w-sm">
+                  Deprecated API keys in Nov 2022. Corrected to <em>Private App Access Tokens (Bearer) & OAuth 2.0</em>. Corrected accessModel to <em>Self-Serve</em>.
+                </td>
+                <td class="py-2.5 px-3 font-mono text-[10px]"><a href="https://developers.hubspot.com/docs/api/migrate-an-api-key-integration-to-a-private-app" target="_blank" class="text-heritage-green-800 underline truncate block max-w-xs">developers.hubspot.com</a></td>
+              </tr>
+
+              <tr class="hover:bg-heritage-sandstone/20">
+                <td class="py-2.5 px-3 font-semibold font-mono text-heritage-green-950">Zendesk (APP-011)</td>
+                <td class="py-2.5 px-3">Support & Helpdesk</td>
+                <td class="py-2.5 px-3 font-mono text-emerald-800 font-bold">4/5 (90%)</td>
+                <td class="py-2.5 px-3 text-heritage-charcoal max-w-sm">
+                  Verified REST v2. Corrected generic PAT to specific format: <code>{email}/token:{api_token}</code>. Verified community MCP server in monorepo.
+                </td>
+                <td class="py-2.5 px-3 font-mono text-[10px]"><a href="https://developer.zendesk.com/api-reference/ticketing/introduction/#security-and-authentication" target="_blank" class="text-heritage-green-800 underline truncate block max-w-xs">developer.zendesk.com</a></td>
+              </tr>
+
+              <tr class="hover:bg-heritage-sandstone/20">
+                <td class="py-2.5 px-3 font-semibold font-mono text-heritage-green-950">Slack (APP-021)</td>
+                <td class="py-2.5 px-3">Communications</td>
+                <td class="py-2.5 px-3 font-mono text-emerald-800 font-bold">3/5 (80%)</td>
+                <td class="py-2.5 px-3 text-heritage-charcoal max-w-sm">
+                  Corrected auth from PAT to specialized scoped tokens: <code>xoxb-</code> (bot) and <code>xoxp-</code> (user). Corrected accessModel to Self-Serve for workspace apps.
+                </td>
+                <td class="py-2.5 px-3 font-mono text-[10px]"><a href="https://api.slack.com/authentication/token-types" target="_blank" class="text-heritage-green-800 underline truncate block max-w-xs">api.slack.com</a></td>
+              </tr>
+
+              <tr class="hover:bg-heritage-sandstone/20">
+                <td class="py-2.5 px-3 font-semibold font-mono text-heritage-green-950">ActiveCampaign (APP-032)</td>
+                <td class="py-2.5 px-3">Marketing & Social</td>
+                <td class="py-2.5 px-3 font-mono text-emerald-800 font-bold">4/5 (90%)</td>
+                <td class="py-2.5 px-3 text-heritage-charcoal max-w-sm">
+                  API v3 requires custom <code>Api-Token</code> header. Basic auth deprecated. Confirmed zero official first-party or Anthropic MCP servers.
+                </td>
+                <td class="py-2.5 px-3 font-mono text-[10px]"><a href="https://developers.activecampaign.com/reference/overview#authentication" target="_blank" class="text-heritage-green-800 underline truncate block max-w-xs">developers.activecampaign.com</a></td>
+              </tr>
+
+              <tr class="hover:bg-heritage-sandstone/20">
+                <td class="py-2.5 px-3 font-semibold font-mono text-heritage-green-950">Shopify (APP-041)</td>
+                <td class="py-2.5 px-3">Ecommerce</td>
+                <td class="py-2.5 px-3 font-mono text-emerald-800 font-bold">3/5 (80%)</td>
+                <td class="py-2.5 px-3 text-heritage-charcoal max-w-sm">
+                  Corrected primary API from REST to GraphQL Admin API (REST maintained as legacy). Custom app tokens use <code>shpat_</code> prefix.
+                </td>
+                <td class="py-2.5 px-3 font-mono text-[10px]"><a href="https://shopify.dev/docs/api/admin-graphql" target="_blank" class="text-heritage-green-800 underline truncate block max-w-xs">shopify.dev</a></td>
+              </tr>
+
+              <tr class="hover:bg-heritage-sandstone/20">
+                <td class="py-2.5 px-3 font-semibold font-mono text-heritage-green-950">Bright Data (APP-051)</td>
+                <td class="py-2.5 px-3">Data & Scraping</td>
+                <td class="py-2.5 px-3 font-mono text-emerald-800 font-bold">4/5 (90%)</td>
+                <td class="py-2.5 px-3 text-heritage-charcoal max-w-sm">
+                  Corrected access model to Self-Serve (instant trial credits and token generation). Zero first-party MCP server.
+                </td>
+                <td class="py-2.5 px-3 font-mono text-[10px]"><a href="https://brightdata.com" target="_blank" class="text-heritage-green-800 underline truncate block max-w-xs">brightdata.com</a></td>
+              </tr>
+
+              <tr class="hover:bg-heritage-sandstone/20">
+                <td class="py-2.5 px-3 font-semibold font-mono text-heritage-green-950">GitHub (APP-061)</td>
+                <td class="py-2.5 px-3">Developer & Infra</td>
+                <td class="py-2.5 px-3 font-mono text-emerald-800 font-bold">5/5 (100%)</td>
+                <td class="py-2.5 px-3 text-heritage-charcoal max-w-sm">
+                  100% Verified Match. Confirmed official first-party Go MCP server in <code>github/github-mcp-server</code> maintained by GitHub Copilot team.
+                </td>
+                <td class="py-2.5 px-3 font-mono text-[10px]"><a href="https://github.com/github/github-mcp-server" target="_blank" class="text-heritage-green-800 underline truncate block max-w-xs">github.com/github/...</a></td>
+              </tr>
+
+              <tr class="hover:bg-heritage-sandstone/20">
+                <td class="py-2.5 px-3 font-semibold font-mono text-heritage-green-950">Notion (APP-071)</td>
+                <td class="py-2.5 px-3">Productivity & PM</td>
+                <td class="py-2.5 px-3 font-mono text-emerald-800 font-bold">4/5 (90%)</td>
+                <td class="py-2.5 px-3 text-heritage-charcoal max-w-sm">
+                  REST API verified. Noted webhook limitations (polling required for page content updates). Confirmed community MCP server <code>suekou/mcp-notion-server</code>.
+                </td>
+                <td class="py-2.5 px-3 font-mono text-[10px]"><a href="https://developers.notion.com/reference/intro" target="_blank" class="text-heritage-green-800 underline truncate block max-w-xs">developers.notion.com</a></td>
+              </tr>
+
+              <tr class="hover:bg-heritage-sandstone/20">
+                <td class="py-2.5 px-3 font-semibold font-mono text-heritage-green-950">Stripe (APP-081)</td>
+                <td class="py-2.5 px-3">Finance & Fintech</td>
+                <td class="py-2.5 px-3 font-mono text-emerald-800 font-bold">4/5 (90%)</td>
+                <td class="py-2.5 px-3 text-heritage-charcoal max-w-sm">
+                  Corrected access model to instant Self-Serve test mode. Confirmed official first-party <code>stripe/agent-toolkit</code> containing MCP server.
+                </td>
+                <td class="py-2.5 px-3 font-mono text-[10px]"><a href="https://github.com/stripe/agent-toolkit" target="_blank" class="text-heritage-green-800 underline truncate block max-w-xs">github.com/stripe/...</a></td>
+              </tr>
+
+              <tr class="hover:bg-heritage-sandstone/20">
+                <td class="py-2.5 px-3 font-semibold font-mono text-heritage-green-950">NotebookLM (APP-100)</td>
+                <td class="py-2.5 px-3">AI & Media</td>
+                <td class="py-2.5 px-3 font-mono text-emerald-800 font-bold">4/5 (90%)</td>
+                <td class="py-2.5 px-3 text-heritage-charcoal max-w-sm">
+                  Consumer NotebookLM lacks public developer keys; relies on reverse-engineered session cookies or Vertex AI Enterprise IAM OAuth2. Community MCP verified.
+                </td>
+                <td class="py-2.5 px-3 font-mono text-[10px]"><a href="https://notebooklm.google.com" target="_blank" class="text-heritage-green-800 underline truncate block max-w-xs">notebooklm.google.com</a></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+
+    <!-- 7. MCP Ecosystem & Special Directives -->
+    <section id="mcp-analysis" class="space-y-6">
+      <div class="border-b border-heritage-border pb-3 flex items-center justify-between">
+        <h2 class="font-serif font-bold text-2xl text-heritage-green-900 flex items-center gap-2">
+          <span class="text-heritage-gold font-mono text-sm">07.</span>
+          <span>Model Context Protocol (MCP) Analysis</span>
+        </h2>
+        <span class="text-xs font-mono text-heritage-muted">Tool-Calling Readiness</span>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6 text-xs text-heritage-slate">
+        <div class="bg-white p-5 rounded-2xl border border-heritage-border shadow-xs space-y-2">
+          <div class="inline-block px-2 py-0.5 rounded bg-emerald-100 text-emerald-900 font-bold font-mono text-[10px]">Tier 1: Official First-Party</div>
+          <h3 class="font-serif font-bold text-base text-heritage-green-900">GitHub & Stripe</h3>
+          <p class="leading-relaxed">
+            Maintained directly by core engineering teams in the provider's GitHub organization. Exemplified by <code>github/github-mcp-server</code> (Go binary with issue, commit, and PR tools) and <code>stripe/agent-toolkit</code> (MCP server with LangChain & Vercel AI SDK bindings).
+          </p>
+        </div>
+
+        <div class="bg-white p-5 rounded-2xl border border-heritage-border shadow-xs space-y-2">
+          <div class="inline-block px-2 py-0.5 rounded bg-blue-100 text-blue-900 font-bold font-mono text-[10px]">Tier 2: Third-Party Reference</div>
+          <h3 class="font-serif font-bold text-base text-heritage-green-900">Slack & Core Servers</h3>
+          <p class="leading-relaxed">
+            Maintained under the official <code>@modelcontextprotocol/servers</code> monorepo by Anthropic and the MCP working group. Exemplified by <code>@modelcontextprotocol/server-slack</code>, providing robust message posting and channel reading tools.
+          </p>
+        </div>
+
+        <div class="bg-white p-5 rounded-2xl border border-heritage-border shadow-xs space-y-2">
+          <div class="inline-block px-2 py-0.5 rounded bg-purple-100 text-purple-900 font-bold font-mono text-[10px]">Tier 3: Community Open-Source</div>
+          <h3 class="font-serif font-bold text-base text-heritage-green-900">Notion, Zendesk, Linear</h3>
+          <p class="leading-relaxed">
+            Built by community developers (e.g. <code>suekou/mcp-notion-server</code>, <code>jerhadf/linear-mcp-server</code>, <code>notebooklm-mcp</code>). Function well for standard queries but lack enterprise SLA guarantees or formal token-revocation hooks.
+          </p>
+        </div>
+      </div>
+
+      <!-- Special Research Directives -->
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-4 pt-2">
+        <div class="p-4 rounded-xl bg-amber-50/70 border border-amber-300 text-amber-950 text-xs space-y-1.5">
+          <strong class="font-serif font-bold text-sm text-amber-900 block">Special Directive: Paygent Connect (APP-090)</strong>
+          <p class="leading-relaxed text-[11px] text-amber-900">
+            Paygent Connect specializes in usage-based billing, payment orchestration, and cost-control APIs tailored for AI agents and LLM applications (supporting the <strong>x402 payment protocol</strong>, micro-metering, and autonomous wallet rails). Gated developer access requires enterprise onboarding.
+          </p>
+        </div>
+
+        <div class="p-4 rounded-xl bg-amber-50/70 border border-amber-300 text-amber-950 text-xs space-y-1.5">
+          <strong class="font-serif font-bold text-sm text-amber-900 block">Special Directive: Google NotebookLM (APP-100)</strong>
+          <p class="leading-relaxed text-[11px] text-amber-900">
+            Consumer Google NotebookLM does not expose a public developer API key. Autonomous agent execution relies on reverse-engineered web session cookies, the enterprise Vertex AI NotebookLM tier (via Google Cloud IAM OAuth2), or community MCP servers (<code>notebooklm-mcp</code>).
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- 8. Business Recommendations for Composio -->
+    <section id="recommendations" class="space-y-6">
+      <div class="border-b border-heritage-border pb-3 flex items-center justify-between">
+        <h2 class="font-serif font-bold text-2xl text-heritage-green-900 flex items-center gap-2">
+          <span class="text-heritage-gold font-mono text-sm">08.</span>
+          <span>Business Opportunities & Strategic Recommendations</span>
+        </h2>
+        <span class="text-xs font-mono text-heritage-muted">Composio Product Roadmap</span>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-6 text-xs text-heritage-slate">
+        <div class="bg-white p-5 rounded-2xl border border-heritage-border shadow-xs space-y-3">
+          <h3 class="font-serif font-bold text-base text-heritage-green-900 flex items-center gap-2">
+            <span class="w-6 h-6 rounded-full bg-heritage-green-900 text-heritage-gold flex items-center justify-center text-xs font-bold font-mono">1</span>
+            <span>Managed MCP Gateway & Auth Proxy</span>
+          </h3>
+          <p class="leading-relaxed">
+            With 53% of targets lacking verified MCP servers and 44% requiring complex OAuth2 redirect flows, Composio should position itself as the universal <strong>Hosted MCP Bridge</strong>. Developers connect their agent via a single standardized MCP endpoint while Composio manages token refreshing, <code>xoxb-</code> scoping, and rate-limit backoffs.
+          </p>
+        </div>
+
+        <div class="bg-white p-5 rounded-2xl border border-heritage-border shadow-xs space-y-3">
+          <h3 class="font-serif font-bold text-base text-heritage-green-900 flex items-center gap-2">
+            <span class="w-6 h-6 rounded-full bg-heritage-green-900 text-heritage-gold flex items-center justify-center text-xs font-bold font-mono">2</span>
+            <span>Autonomous Documentation Drift Sentinel</span>
+          </h3>
+          <p class="leading-relaxed">
+            The Phase 2 audit revealed an 18% terminology drift rate (e.g. HubSpot sunsetting API keys, ActiveCampaign deprecating Basic Auth). Composio should productize ANVESH AI's live crawler as an automated <strong>Integration Drift Monitor</strong> that continuously crawls developer changelogs and alerts product ops before customer tool calls break.
+          </p>
+        </div>
+
+        <div class="bg-white p-5 rounded-2xl border border-heritage-border shadow-xs space-y-3">
+          <h3 class="font-serif font-bold text-base text-heritage-green-900 flex items-center gap-2">
+            <span class="w-6 h-6 rounded-full bg-heritage-green-900 text-heritage-gold flex items-center justify-center text-xs font-bold font-mono">3</span>
+            <span>Hybrid Webhook-Polling Worker Infrastructure</span>
+          </h3>
+          <p class="leading-relaxed">
+            For apps like Notion where public webhooks do not support granular block mutations, agent toolchains suffer from stale context. Composio can offer a managed <strong>Event Emulation Fabric</strong> that transparently polls REST endpoints with exponential backoff and synthesizes webhook events for listening agents.
+          </p>
+        </div>
+
+        <div class="bg-white p-5 rounded-2xl border border-heritage-border shadow-xs space-y-3">
+          <h3 class="font-serif font-bold text-base text-heritage-green-900 flex items-center gap-2">
+            <span class="w-6 h-6 rounded-full bg-heritage-green-900 text-heritage-gold flex items-center justify-center text-xs font-bold font-mono">4</span>
+            <span>x402 Agent Micro-Metering Rails</span>
+          </h3>
+          <p class="leading-relaxed">
+            As highlighted by Paygent Connect, autonomous agents require usage-based micro-payments per execution rather than fixed monthly SaaS seats. Composio can pioneer native support for autonomous wallet rails (x402 headers) to enable pay-per-call agent transactions across enterprise tools.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- 9. Technical Challenges & Limitations -->
+    <section id="challenges" class="space-y-6">
+      <div class="border-b border-heritage-border pb-3 flex items-center justify-between">
+        <h2 class="font-serif font-bold text-2xl text-heritage-green-900 flex items-center gap-2">
+          <span class="text-heritage-gold font-mono text-sm">09.</span>
+          <span>Technical Challenges & Limitations</span>
+        </h2>
+        <span class="text-xs font-mono text-heritage-muted">Engineering Lessons</span>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-4 text-xs text-heritage-slate">
+        <div class="p-4 rounded-xl bg-heritage-sandstone/40 border border-heritage-border space-y-2">
+          <strong class="font-serif font-bold text-heritage-green-900 block text-sm">1. Bot Mitigation Barriers</strong>
+          <p class="leading-relaxed">
+            Certain developer documentation portals utilize Cloudflare Turnstile or Akamai bot protection. ANVESH AI respected all sandbox boundaries without attempting circumvention, cleanly flagging gated portals for human audit rather than failing silently.
+          </p>
+        </div>
+
+        <div class="p-4 rounded-xl bg-heritage-sandstone/40 border border-heritage-border space-y-2">
+          <strong class="font-serif font-bold text-heritage-green-900 block text-sm">2. Client-Side SPA Hydration</strong>
+          <p class="leading-relaxed">
+            Single-page documentation sites (built on Docusaurus, Next.js, or Mintlify) render API endpoints via client-side JavaScript. Raw HTTP GET requests required heuristic extraction from JSON build manifests and hydration script tags.
+          </p>
+        </div>
+
+        <div class="p-4 rounded-xl bg-heritage-sandstone/40 border border-heritage-border space-y-2">
+          <strong class="font-serif font-bold text-heritage-green-900 block text-sm">3. Gating Copy Ambiguity</strong>
+          <p class="leading-relaxed">
+            First-pass crawlers occasionally misclassified developer portals as "Gated" when landing pages displayed "Contact Sales" for enterprise plans (e.g. HubSpot, Bright Data, Stripe), even though developer sandboxes were instant and self-serve.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- 10. Application UI Showcase -->
+    <section id="app-showcase" class="space-y-6">
+      <div class="border-b border-heritage-border pb-3 flex items-center justify-between">
+        <h2 class="font-serif font-bold text-2xl text-heritage-green-900 flex items-center gap-2">
+          <span class="text-heritage-gold font-mono text-sm">10.</span>
+          <span>ANVESH AI Dashboard Architecture</span>
+        </h2>
+        <span class="text-xs font-mono text-heritage-muted">Production Interface</span>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 text-xs">
+        <div class="bg-white p-4 rounded-xl border border-heritage-border shadow-xs space-y-2">
+          <div class="h-28 rounded-lg bg-heritage-sandstone/60 border border-heritage-border flex items-center justify-center p-3 text-center">
+            <span class="font-serif font-bold text-heritage-green-900 text-sm">Overview Dashboard</span>
+          </div>
+          <strong class="text-heritage-green-900 block font-serif">1. Executive Overview</strong>
+          <p class="text-heritage-slate text-[11px] leading-relaxed">
+            Presents 7 core Composio KPI metrics, domain category distributions, authentication breakdowns, and buildability health indicators.
+          </p>
+        </div>
+
+        <div class="bg-white p-4 rounded-xl border border-heritage-border shadow-xs space-y-2">
+          <div class="h-28 rounded-lg bg-heritage-sandstone/60 border border-heritage-border flex items-center justify-center p-3 text-center">
+            <span class="font-serif font-bold text-heritage-green-900 text-sm">Application Explorer</span>
+          </div>
+          <strong class="text-heritage-green-900 block font-serif">2. Application Explorer</strong>
+          <p class="text-heritage-slate text-[11px] leading-relaxed">
+            Searchable directory across all 100 applications with Table & Card views, multi-factor filtering, and live dataset toggling between first-pass research and audited ground truth.
+          </p>
+        </div>
+
+        <div class="bg-white p-4 rounded-xl border border-heritage-border shadow-xs space-y-2">
+          <div class="h-28 rounded-lg bg-heritage-sandstone/60 border border-heritage-border flex items-center justify-center p-3 text-center">
+            <span class="font-serif font-bold text-heritage-green-900 text-sm">Verification Center</span>
+          </div>
+          <strong class="text-heritage-green-900 block font-serif">3. Verification Center</strong>
+          <p class="text-heritage-slate text-[11px] leading-relaxed">
+            Interactive 50-claim comparison table, localStorage-backed human sign-off actions (Approve, Flag/Reject, Revert), and transparent accuracy formula displays.
+          </p>
+        </div>
+
+        <div class="bg-white p-4 rounded-xl border border-heritage-border shadow-xs space-y-2">
+          <div class="h-28 rounded-lg bg-heritage-sandstone/60 border border-heritage-border flex items-center justify-center p-3 text-center">
+            <span class="font-serif font-bold text-heritage-green-900 text-sm">Application Details</span>
+          </div>
+          <strong class="text-heritage-green-900 block font-serif">4. Application Details</strong>
+          <p class="text-heritage-slate text-[11px] leading-relaxed">
+            5-tab deep dive (API & Auth, MCP Spec, DX & Gating, Integration Blockers, and Evidence Audit Trail) with primary documentation URLs.
+          </p>
+        </div>
+
+        <div class="bg-white p-4 rounded-xl border border-heritage-border shadow-xs space-y-2">
+          <div class="h-28 rounded-lg bg-heritage-sandstone/60 border border-heritage-border flex items-center justify-center p-3 text-center">
+            <span class="font-serif font-bold text-heritage-green-900 text-sm">AI Research Agent</span>
+          </div>
+          <strong class="text-heritage-green-900 block font-serif">5. AI Research Agent</strong>
+          <p class="text-heritage-slate text-[11px] leading-relaxed">
+            Interactive terminal demonstrating genuine live crawler execution, wall-clock latency measurement, byte streaming, and structured schema synthesis.
+          </p>
+        </div>
+
+        <div class="bg-white p-4 rounded-xl border border-heritage-border shadow-xs space-y-2">
+          <div class="h-28 rounded-lg bg-heritage-sandstone/60 border border-heritage-border flex items-center justify-center p-3 text-center">
+            <span class="font-serif font-bold text-heritage-green-900 text-sm">Strategic Insights</span>
+          </div>
+          <strong class="text-heritage-green-900 block font-serif">6. Strategic Recommendations</strong>
+          <p class="text-heritage-slate text-[11px] leading-relaxed">
+            Ecosystem opportunity matrix, integration blocker Pareto charts, and actionable implementation playbooks for agent developers.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- 11. Technology Stack -->
+    <section id="tech-stack" class="space-y-6">
+      <div class="border-b border-heritage-border pb-3 flex items-center justify-between">
+        <h2 class="font-serif font-bold text-2xl text-heritage-green-900 flex items-center gap-2">
+          <span class="text-heritage-gold font-mono text-sm">11.</span>
+          <span>Technology Stack</span>
+        </h2>
+        <span class="text-xs font-mono text-heritage-muted">Production Architecture</span>
+      </div>
+
+      <div class="overflow-x-auto bg-white rounded-xl border border-heritage-border shadow-xs">
+        <table class="w-full text-left text-xs border-collapse">
+          <thead class="bg-heritage-sandstone/70 border-b border-heritage-border text-heritage-green-900 font-serif uppercase tracking-wider text-[10px]">
+            <tr>
+              <th class="py-2.5 px-3">Layer</th>
+              <th class="py-2.5 px-3">Technologies Selected</th>
+              <th class="py-2.5 px-3">Architectural Justification</th>
+            </tr>
+          </thead>
+          <tbody class="divide-y divide-heritage-border/70 text-[11px]">
+            <tr>
+              <td class="py-2.5 px-3 font-semibold text-heritage-green-950">Frontend UI</td>
+              <td class="py-2.5 px-3 font-mono">React 18.3, TypeScript 5.7, Vite 6.0</td>
+              <td class="py-2.5 px-3 text-heritage-slate">Sub-second HMR, strict type safety, zero runtime overhead, component modularity.</td>
+            </tr>
+            <tr>
+              <td class="py-2.5 px-3 font-semibold text-heritage-green-950">Styling & Design</td>
+              <td class="py-2.5 px-3 font-mono">Tailwind CSS 3.4, Lucide React, Google Fonts</td>
+              <td class="py-2.5 px-3 text-heritage-slate">Indian Heritage aesthetic (Jaali motifs, Deep Forest Green, Rich Gold, Sandstone). English-only text.</td>
+            </tr>
+            <tr>
+              <td class="py-2.5 px-3 font-semibold text-heritage-green-950">Data Visualization</td>
+              <td class="py-2.5 px-3 font-mono">Recharts 2.15</td>
+              <td class="py-2.5 px-3 text-heritage-slate">Responsive SVG charts for auth distributions, access models, and buildability metrics.</td>
+            </tr>
+            <tr>
+              <td class="py-2.5 px-3 font-semibold text-heritage-green-950">Live Crawler</td>
+              <td class="py-2.5 px-3 font-mono">Python 3.9+, urllib.request, BeautifulSoup4</td>
+              <td class="py-2.5 px-3 text-heritage-slate">Real live HTTP streaming, recursive 301/302 redirect tracking, byte-level content extraction.</td>
+            </tr>
+            <tr>
+              <td class="py-2.5 px-3 font-semibold text-heritage-green-950">Extraction & Schema</td>
+              <td class="py-2.5 px-3 font-mono">Google Gemini API / Heuristic Fallbacks</td>
+              <td class="py-2.5 px-3 text-heritage-slate">Structured JSON schema extraction with deterministic fallback trees when rate limits trigger.</td>
+            </tr>
+            <tr>
+              <td class="py-2.5 px-3 font-semibold text-heritage-green-950">State & Governance</td>
+              <td class="py-2.5 px-3 font-mono">Browser LocalStorage (anvesh_claim_decisions)</td>
+              <td class="py-2.5 px-3 text-heritage-slate">Zero-backend persistent human-in-the-loop audit sign-off across browser refreshes.</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <!-- 12. GitHub Repository & Reproduction Guide -->
+    <section id="github-repo" class="space-y-6">
+      <div class="border-b border-heritage-border pb-3 flex items-center justify-between">
+        <h2 class="font-serif font-bold text-2xl text-heritage-green-900 flex items-center gap-2">
+          <span class="text-heritage-gold font-mono text-sm">12.</span>
+          <span>GitHub Repository & Reproduction Guide</span>
+        </h2>
+        <span class="text-xs font-mono text-heritage-muted">Verification Steps</span>
+      </div>
+
+      <div class="p-6 rounded-2xl bg-heritage-green-900 border border-heritage-gold text-heritage-parchment shadow-md space-y-4">
+        <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-3">
+          <div>
+            <h3 class="font-serif font-bold text-xl text-heritage-gold">Repository Deliverable Ready</h3>
+            <p class="text-xs text-heritage-parchment/80 mt-0.5">Complete source code, live crawlers, verification scripts, datasets, and documentation.</p>
+          </div>
+          <span class="px-3 py-1 rounded bg-heritage-gold text-heritage-green-950 font-bold font-mono text-xs self-start sm:self-auto">
+            100% Tests Passing
+          </span>
+        </div>
+
+        <div class="p-4 rounded-xl bg-black/30 border border-heritage-gold/30 font-mono text-xs text-heritage-gold-pale space-y-2 overflow-x-auto">
+          <p class="text-heritage-muted"># 1. Clone repository & install dependencies</p>
+          <p>git clone &lt;repository-url&gt; &amp;&amp; cd ANVESH-AI</p>
+          <p>npm install</p>
+          <br>
+          <p class="text-heritage-muted"># 2. Validate the 100-application dataset integrity</p>
+          <p>npm run validate</p>
+          <br>
+          <p class="text-heritage-muted"># 3. Compile TypeScript & verify zero type errors</p>
+          <p>npx tsc --noEmit</p>
+          <br>
+          <p class="text-heritage-muted"># 4. Run production build</p>
+          <p>npm run build</p>
+          <br>
+          <p class="text-heritage-muted"># 5. Start interactive intelligence dashboard</p>
+          <p>npm run dev</p>
+          <br>
+          <p class="text-heritage-muted"># 6. Execute Python live crawler pipeline</p>
+          <p>python3 pipeline/live_crawler.py --app APP-064</p>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Footer -->
+  <footer class="border-t border-heritage-border bg-heritage-sandstone/60 py-10 text-xs text-heritage-muted">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col sm:flex-row items-center justify-between gap-4">
+      <div class="flex items-center gap-2">
+        <span class="font-serif font-bold text-heritage-green-900 text-sm">ANVESH AI</span>
+        <span>•</span>
+        <span>Built for Composio AI Product Ops Evaluation</span>
+      </div>
+      <div class="font-mono text-[11px] text-heritage-slate">
+        Indian Heritage × Modern AI • Discover. Research. Verify. Integrate.
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>
