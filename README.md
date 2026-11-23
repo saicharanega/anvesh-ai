@@ -1,14 +1,14 @@
 # ANVESH AI — Discover. Research. Verify. Integrate.
 
+[![React](https://img.shields.io/badge/React-18.3-61dafb.svg)](https://react.dev/)
 [![TypeScript](https://img.shields.io/badge/TypeScript-5.7-blue.svg)](https://www.typescriptlang.org/)
-[![React](https://img.shields.io/badge/React-18.3-61dafb.svg)](https://reactjs.org/)
 [![Vite](https://img.shields.io/badge/Vite-6.0-646cff.svg)](https://vitejs.dev/)
-[![Tailwind CSS](https://img.shields.io/badge/Tailwind-3.4-38b2ac.svg)](https://tailwindcss.com/)
 [![Python](https://img.shields.io/badge/Python-3.10%2B-yellow.svg)](https://www.python.org/)
 [![Deployment](https://img.shields.io/badge/Deployment-Vercel-black.svg)](https://vercel.com/)
-[![License](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)
 
-> **ANVESH AI** is an AI-powered Application Research and Integration Intelligence Platform built for the **Composio AI Product Ops Intern** technical take-home assignment. It researches 100 software applications across 10 functional categories, extracting developer platform capabilities, authentication schemas, Model Context Protocol (MCP) availability, and integration readiness with verifiable citations.
+**ANVESH AI** is an AI-powered Application Research and Integration Intelligence Platform developed for the **Composio AI Product Ops Intern Take-Home Assignment**.
+
+It researches 100 software applications across 10 functional categories, analyzing authentication methods, API capabilities, Model Context Protocol (MCP) availability, developer documentation, and integration readiness.
 
 ---
 
@@ -16,143 +16,15 @@
 
 | Resource | Link |
 |---|---|
-| **Live Dashboard** | https://anvesh-ai.vercel.app/ |
-| **HTML Case Study** | https://anvesh-ai.vercel.app/case_study.html |
-| **GitHub Repository** | https://github.com/saicharanega/anvesh-ai |
-| **Deployment Platform** | Vercel |
+| Live Dashboard | https://anvesh-ai.vercel.app/ |
+| Live HTML Case Study | https://anvesh-ai.vercel.app/case_study.html |
+| GitHub Repository | https://github.com/saicharanega/anvesh-ai |
 
 ---
 
-## Table of Contents
+## ⚡ Quick Start — Run the Research Agent
 
-- Project Overview
-- Key Features
-- Architecture & Research Pipeline
-- Repository Structure
-- Tech Stack
-- Prerequisites
-- Installation & Setup
-- Running the Frontend Dashboard
-- Running the Live Research Pipeline
-- Independent Verification Audit
-- Dataset Validation
-- Viewing the HTML Case Study
-- Research Findings & Summary
-- Deployment Guide
-- License
-
----
-
-## Project Overview
-
-Integrating modern enterprise and SaaS platforms into AI-agent workflows requires exact technical intelligence:
-
-- What authentication methods are supported (OAuth 2.0, Personal Access Tokens, API Keys, mTLS)?
-- Is API access instant self-serve or gated behind partner applications and sales calls?
-- Is there an existing Model Context Protocol (MCP) server, and is it official first-party or third-party/community?
-- What are the real integration blockers (rate limits, webhooks latency, IP allowlisting)?
-
-**ANVESH AI automates this research process:**
-
-1. **100 Applications Researched:** Distributed across 10 functional software categories.
-2. **Live HTTP Network Extraction:** Autonomous crawler fetches official developer portals, API documentation, and GitHub repositories.
-3. **50-Claim Independent Audit:** A representative audit reporting 76% strict standard accuracy and an experimental weighted score of 85%.
-4. **Human-in-the-Loop Verification Center:** Interactive reviewer console for inspecting claims, reviewing documentation evidence, and recording decisions.
-
----
-
-## Key Features
-
-- **Executive Overview Dashboard:** Application metrics, authentication distribution, API protocol breakdowns, and MCP availability.
-- **Application Explorer:** Search and filter 100 applications by category, authentication, MCP classification, and buildability.
-- **Deep Application Dossiers:** Technical documentation, API endpoints, rate limits, webhook capabilities, and audit corrections.
-- **Verification Audit Center:** Interactive claim verification across 10 representative applications.
-- **Composio Integration Matrix:** Prioritized integration opportunities and roadmap recommendations.
-- **Indian Heritage × Modern AI Theme:** Deep Emerald, Warm Gold, and Parchment design system.
-
----
-
-## Architecture & Research Pipeline
-
-The research architecture consists of six stages:
-
-1. Discovery and normalization.
-2. Live HTTP network crawling.
-3. Multi-pattern technical extraction.
-4. LLM technical enrichment.
-5. Evidence citation and scoring.
-6. Independent audit and human-in-the-loop verification.
-
----
-
-## Repository Structure
-
-```text
-ANVESH-AI/
-├── case_study.html
-├── index.html
-├── package.json
-├── package-lock.json
-├── README.md
-├── vite.config.ts
-├── tsconfig.json
-├── tailwind.config.js
-├── checkpoints/
-│   ├── research_checkpoint.json
-│   └── verification_audit.json
-├── pipeline/
-│   ├── live_crawler.py
-│   ├── batch_live_crawler.py
-│   ├── independent_verification_audit.py
-│   └── research_pipeline.py
-├── public/
-│   └── case_study.html
-├── scripts/
-│   ├── generate_composio_100.js
-│   └── validate_dataset.js
-└── src/
-    ├── data/
-    ├── pages/
-    ├── components/
-    └── types/
-```
-
----
-
-## Tech Stack
-
-| Layer | Technologies |
-|---|---|
-| Frontend | React 18, TypeScript 5.7 |
-| Bundler | Vite 6 |
-| Styling | Tailwind CSS 3.4 |
-| Data Visualization | Recharts |
-| Iconography | Lucide React |
-| Crawling | Python 3.10+, Requests |
-| Parsing | BeautifulSoup4, Regex |
-| LLM Enrichment | Google Gemini API |
-| Validation | Node.js Test Runner |
-| Hosting | Vercel |
-| Version Control | Git and GitHub |
-
----
-
-## Prerequisites
-
-Install the following before running the project:
-
-- Node.js v18 or higher
-- npm v9 or higher
-- Python v3.10 or higher
-- Git
-
-Optional:
-
-- Google Gemini API key for LLM-based research enrichment.
-
----
-
-## Installation & Setup
+Follow these steps to clone the repository and run the research agent locally.
 
 ### 1. Clone the repository
 
@@ -161,81 +33,41 @@ git clone https://github.com/saicharanega/anvesh-ai.git
 cd anvesh-ai
 ```
 
-### 2. Install Node.js dependencies
+### 2. Install dependencies
+
+Install Node.js dependencies:
 
 ```bash
 npm install
 ```
 
-### 3. Install Python dependencies
+Install Python dependencies:
 
 ```bash
 pip3 install beautifulsoup4 requests
 ```
 
-Optional Gemini integration:
+For optional Gemini-based LLM enrichment:
 
 ```bash
 pip3 install google-genai
 ```
 
-Set your API key securely in your local environment:
-
-```bash
-export GEMINI_API_KEY="your-api-key-here"
-```
-
-Never commit API keys or `.env` files to GitHub.
-
----
-
-## Running the Frontend Dashboard
-
-### Development Server
-
-```bash
-npm run dev
-```
-
-Open the local URL printed by Vite, normally:
-
-```text
-http://localhost:5173
-```
-
-If port 5173 is already occupied, Vite automatically selects another available port, such as 5174.
-
-### Production Build
-
-```bash
-npm run build
-```
-
-The production files are generated inside the `dist/` directory.
-
-### Preview Production Build
-
-```bash
-npm run preview
-```
-
----
-
-## Running the Live Research Pipeline
-
-### Single Application Crawl
+### 3. Run research for a single application
 
 ```bash
 python3 pipeline/live_crawler.py APP-064
 ```
 
-### Batch Crawling
+### 4. Run batch research
+
+To research five applications starting from index 0:
 
 ```bash
 python3 pipeline/batch_live_crawler.py --start 0 --size 5
 ```
 
-### Full 100-Application Crawl
+### 5. Run the complete 100-application research pipeline
 
 ```bash
 python3 pipeline/batch_live_crawler.py --all
@@ -247,17 +79,188 @@ The crawler saves progress in:
 checkpoints/research_checkpoint.json
 ```
 
-It can resume from the last completed application.
+It supports resuming from previously completed applications.
 
-### Force Re-crawl
+### 6. Validate the dataset
 
 ```bash
-python3 pipeline/batch_live_crawler.py --all --force
+npm run validate
+```
+
+### Optional: Configure Gemini API
+
+For Gemini-based research enrichment, configure your API key as an environment variable:
+
+**macOS / Linux:**
+
+```bash
+export GEMINI_API_KEY="your-api-key-here"
+```
+
+**Windows PowerShell:**
+
+```powershell
+$env:GEMINI_API_KEY="your-api-key-here"
+```
+
+Never commit API keys or `.env` files to GitHub.
+
+---
+
+## 📌 Project Overview
+
+Researching enterprise applications for AI-agent integrations requires understanding:
+
+- Authentication methods such as OAuth 2.0, API Keys, and Personal Access Tokens.
+- API availability and developer access requirements.
+- REST and GraphQL API capabilities.
+- Official and community-maintained MCP servers.
+- Integration challenges such as rate limits, webhooks, and access restrictions.
+
+ANVESH AI automates this research through live documentation crawling, technical extraction, LLM enrichment, evidence collection, and independent verification.
+
+---
+
+## ✨ Key Features
+
+1. **Executive Dashboard:** Displays research metrics, authentication distribution, API protocols, and MCP availability.
+2. **Application Explorer:** Search and filter 100 applications across 10 categories.
+3. **Application Details:** Provides technical information, developer documentation, API endpoints, and integration requirements.
+4. **Verification Audit Center:** Reviews and evaluates research claims against primary sources.
+5. **Composio Integration Matrix:** Identifies integration opportunities and prioritizes potential applications.
+6. **Human-in-the-Loop Verification:** Allows reviewers to inspect claims and record verification decisions.
+
+---
+
+## 🏗️ Architecture & Research Pipeline
+
+The platform follows six major stages:
+
+```text
+1. Discovery & Normalization
+          |
+          v
+2. Live HTTP Network Crawling
+          |
+          v
+3. Technical Information Extraction
+          |
+          v
+4. LLM-Based Enrichment
+          |
+          v
+5. Evidence Citation & Scoring
+          |
+          v
+6. Independent Verification
+   & Human-in-the-Loop Review
+```
+
+### Research Pipeline Components
+
+| Component | Responsibility |
+|---|---|
+| Discovery | Identifies and organizes applications |
+| Live Crawler | Fetches official developer documentation |
+| Technical Extraction | Extracts authentication, API, and MCP information |
+| LLM Enrichment | Uses Gemini for additional technical analysis |
+| Evidence Scoring | Records sources and evaluates integration readiness |
+| Verification Audit | Independently checks research claims |
+
+---
+
+## 🛠️ Technology Stack
+
+| Layer | Technologies |
+|---|---|
+| Frontend | React, TypeScript |
+| Build Tool | Vite |
+| Styling | Tailwind CSS |
+| Data Visualization | Recharts |
+| Icons | Lucide React |
+| Backend Research Pipeline | Python |
+| Web Crawling | Requests |
+| HTML Parsing | BeautifulSoup4, Regex |
+| LLM Integration | Google Gemini API |
+| Validation | Node.js |
+| Hosting | Vercel |
+| Version Control | Git, GitHub |
+
+---
+
+## 📂 Repository Structure
+
+```text
+ANVESH-AI/
+│
+├── case_study.html
+├── index.html
+├── package.json
+├── package-lock.json
+├── README.md
+├── vite.config.ts
+├── tsconfig.json
+├── tailwind.config.js
+│
+├── checkpoints/
+│   ├── research_checkpoint.json
+│   └── verification_audit.json
+│
+├── pipeline/
+│   ├── live_crawler.py
+│   ├── batch_live_crawler.py
+│   ├── independent_verification_audit.py
+│   └── research_pipeline.py
+│
+├── public/
+│   └── case_study.html
+│
+├── scripts/
+│   ├── generate_composio_100.js
+│   └── validate_dataset.js
+│
+└── src/
+    ├── data/
+    ├── pages/
+    ├── components/
+    └── types/
 ```
 
 ---
 
-## Independent Verification Audit
+## 💻 Running the Frontend Dashboard
+
+Start the development server:
+
+```bash
+npm run dev
+```
+
+Open the local URL displayed in your terminal, normally:
+
+```text
+http://localhost:5173
+```
+
+If port 5173 is occupied, Vite automatically selects another available port.
+
+### Build for Production
+
+```bash
+npm run build
+```
+
+### Preview Production Build
+
+```bash
+npm run preview
+```
+
+The production build is generated inside the `dist/` directory.
+
+---
+
+## 🔍 Independent Verification Audit
 
 Run the independent verification audit:
 
@@ -276,15 +279,17 @@ The audit evaluates 50 claims across 10 representative applications.
 | Incorrect / Corrected | 3 | 6% |
 | Experimental Weighted Score | — | 85% |
 
-The weighted score is calculated as:
+Weighted score:
 
-`(38 + 0.5 × 9) / 50 × 100 = 85%`
+```text
+(38 + 0.5 × 9) / 50 × 100 = 85%
+```
 
-This score applies only to the representative 50-claim audit sample.
+*The weighted score applies only to the representative 50-claim audit sample.*
 
 ---
 
-## Dataset Validation
+## 📊 Dataset Validation
 
 Run:
 
@@ -292,49 +297,81 @@ Run:
 npm run validate
 ```
 
-Validation checks include:
+The validation checks:
 
-- Exactly 100 applications.
-- Exactly 10 applications per category.
+- 100 applications in total.
+- 10 applications per category.
 - No duplicate application names or identifiers.
-- Valid HTTP/HTTPS documentation URLs.
-- Special cases such as gated API access and applications without public APIs.
+- Valid documentation and developer portal URLs.
+- Special cases involving gated API access and applications without public APIs.
 
 ---
 
-## Viewing the HTML Case Study
+## 📑 HTML Case Study
 
-The project includes a self-contained HTML case study.
+The project includes a self-contained HTML case study covering 18 sections.
 
-### Local Viewing
+It includes:
 
-Open `case_study.html` directly in your browser.
+- Executive summary and problem statement.
+- Research methodology.
+- Technical architecture and workflow.
+- 100-application coverage matrix.
+- Research findings and API/MCP insights.
+- Independent verification audit.
+- Composio integration roadmap.
+- Technical challenges and recommendations.
 
-Alternatively, start the Vite server:
-
-```bash
-npm run dev
-```
-
-Then open:
-
-```text
-http://localhost:5173/case_study.html
-```
-
-Use the port printed by Vite if it selects a different one.
-
-### Live Case Study
+**View the live case study:**
 
 https://anvesh-ai.vercel.app/case_study.html
 
-The case study contains 18 sections covering the executive summary, research methodology, architecture, application coverage, verification results, Composio integration opportunities, and technical challenges.
+---
+
+## 🌐 Deployment Guide
+
+ANVESH AI is deployed using **Vercel** and connected to the GitHub repository.
+
+### Vercel Configuration
+
+| Setting | Value |
+|---|---|
+| Framework Preset | Vite |
+| Root Directory | `./` |
+| Build Command | `npm run build` |
+| Output Directory | `dist` |
+| Install Command | `npm install` |
+
+### Deploying Updates
+
+After making changes to the project, push them to GitHub:
+
+```bash
+git add .
+git commit -m "Update ANVESH AI"
+git push origin main
+```
+
+Vercel automatically builds and deploys new changes when the connected production branch receives updates.
+
+### Vercel CLI (Alternative)
+
+```bash
+npm install -g vercel
+vercel
+```
+
+For production deployment:
+
+```bash
+vercel --prod
+```
 
 ---
 
-## Research Findings & Summary
+## 📈 Research Categories
 
-### 10 Application Categories
+The platform covers 100 applications across 10 categories:
 
 | Category | Applications |
 |---|---:|
@@ -350,128 +387,28 @@ The case study contains 18 sections covering the executive summary, research met
 | AI, Research and Media | 10 |
 | **Total** | **100** |
 
-### Key Research Insights
+---
 
-1. OAuth 2.0 is a dominant authentication method across enterprise applications.
-2. REST APIs remain widely used, while GraphQL is available in several modern platforms.
-3. MCP adoption is growing, with both official and community-maintained implementations.
-4. Some platforms restrict API access through partner approvals, enterprise plans, or other access requirements.
+## 🔐 Security Notes
+
+- Keep API keys and credentials outside source control.
+- Never commit `.env` files.
+- Use environment variables for sensitive configuration.
+- Review files before pushing changes to GitHub.
 
 ---
 
-## Deployment Guide
+## 👩‍💻 Author & Attribution
 
-### Production Deployment — Vercel
+**Developed for:** Composio AI Product Ops Intern Take-Home Assignment.
 
-ANVESH AI is deployed on Vercel and connected to its GitHub repository.
+**Project:** ANVESH AI
 
-**Live URLs:**
+**Tagline:** Discover. Research. Verify. Integrate.
 
-- Dashboard: https://anvesh-ai.vercel.app/
-- Case Study: https://anvesh-ai.vercel.app/case_study.html
-- GitHub: https://github.com/saicharanega/anvesh-ai
+**Live Application:** https://anvesh-ai.vercel.app/
 
-### Vercel Configuration
-
-| Setting | Value |
-|---|---|
-| Framework Preset | Vite |
-| Root Directory | `./` |
-| Build Command | `npm run build` |
-| Output Directory | `dist` |
-| Install Command | `npm install` |
-
-### Deploy Using GitHub Integration
-
-1. Sign in to [Vercel](https://vercel.com/) using GitHub.
-2. Select **Add New → Project**.
-3. Import `saicharanega/anvesh-ai`.
-4. Verify the build configuration above.
-5. Click **Deploy**.
-6. Wait until the deployment status becomes **Ready**.
-7. Open the production URL and verify the dashboard and case study.
-
-### Automatic Deployment
-
-After connecting GitHub to Vercel, future pushes to the configured production branch trigger new deployments automatically.
-
-To publish updates:
-
-```bash
-git add .
-git commit -m "Update ANVESH AI"
-git push origin main
-```
-
-Vercel will build and deploy the latest changes.
-
-### Deploy Using Vercel CLI
-
-Alternatively, install the Vercel CLI:
-
-```bash
-npm install -g vercel
-```
-
-Deploy:
-
-```bash
-vercel
-```
-
-For production:
-
-```bash
-vercel --prod
-```
-
-### Environment Variables
-
-The currently published frontend dashboard and static case study do not require environment variables.
-
-The optional research pipeline can use `GEMINI_API_KEY` locally for Gemini-based enrichment.
-
-Never upload API keys, credentials, or `.env` files to GitHub.
-
-If a future deployed feature requires a secret, configure it through:
-
-**Vercel → Project Settings → Environment Variables**
-
-### Other Hosting Options
-
-**Netlify**
-
-1. Connect your GitHub repository.
-2. Set build command to `npm run build`.
-3. Set publish directory to `dist`.
-4. Deploy.
-
-**GitHub Pages**
-
-The standalone HTML case study can be hosted as a static page. For the Vite dashboard, configure the repository base path and a GitHub Actions build workflow before publishing `dist/`.
-
----
-
-## Deployment Verification Checklist
-
-- [ ] GitHub repository is accessible.
-- [ ] Vercel deployment status is Ready.
-- [ ] Dashboard homepage loads correctly.
-- [ ] HTML case study loads correctly.
-- [ ] Charts, tables, and navigation work.
-- [ ] No API keys or private credentials are exposed.
-
----
-
-## Author & Attribution
-
-Developed for the **Composio AI Product Ops Intern Take-Home Assignment**.
-
-- **Project:** ANVESH AI
-- **Tagline:** Discover. Research. Verify. Integrate.
-- **Deployment:** Vercel
-- **Source Code:** https://github.com/saicharanega/anvesh-ai
-- **Live Application:** https://anvesh-ai.vercel.app/
+**Source Repository:** https://github.com/saicharanega/anvesh-ai
 
 **Design Philosophy:** Indian Heritage aesthetics × Modern Enterprise AI.
 
